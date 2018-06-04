@@ -11,6 +11,7 @@
   "author": "Jean Claudette Ambait",
   "license": "ISC",
   "dependencies": {
+    "hoek": "^4.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0"
