@@ -22,10 +22,25 @@ img {
     margin-right: 10px;
 }
 
+p {
+    padding-left: 10px;
+}
+
+button {
+    margin: 15px auto;
+    display: block;
+    color: #2CAACA;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #2CAACA;
+    padding: 15px;
+    width: 180px;
+    cursor: pointer;
+}
+
 #app {
     color: white;
     max-width: 320px;
-    padding: 30px;
     text-align: left;
     height: 100vh;
     margin: 0 auto;
@@ -50,9 +65,17 @@ img {
     grid-row: 1;
 }
 
-.profile-name-title {
+.profile-name-title--single-line {
     grid-column: 2;
     grid-row: 1;
+    cursor: pointer;
+}
+
+.profile-name-title--multiple-line {
+    grid-column: 1;
+    grid-row: 2;
+    cursor: none;
+    text-align: center;
 }
 
 .profile-name {
@@ -60,3 +83,43 @@ img {
     font-size: 22px;
 }
 
+.profile-details {
+    width: 280px;
+}
+
+.profile-details label {
+    font-weight: bold;
+}
+
+.image-center {
+    margin: 0 auto;
+}
+
+.show-content {
+    display: inline-block;
+}
+
+.hide-content {
+    display: none;
+}
+
+.close-div {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    background: #2CAACA;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    left: 45%;
+    cursor: pointer;
+}
+
+.close-div:after{
+    display: inline-block;
+    content: "\00d7"; /* renders 'X' */
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 0.7;
+}

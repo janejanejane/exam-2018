@@ -25,15 +25,5 @@ export default {
             .catch((err) => {
                 console.log('profile error:', err);
             });
-    },
-    getImage: (imageId) => {
-        return instance.get(`${imageId}`)
-            .then((res) => {
-                console.log('image result:', res);
-                return res.data;
-            })
-            .catch((err) => {
-                console.log('error:', err);
-            });
     }
 };

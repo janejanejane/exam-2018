@@ -18,7 +18,7 @@ class Image extends React.Component {
     render() {
         if (!this.state.image) null;
 
-        return <img src={this.state.image} alt=""/>;
+        return <img src={this.state.image} {...this.props} alt=""/>;
     }
 }
 
