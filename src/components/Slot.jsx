@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import utils from '@/utils';
+import Profile from './Profile';
 
 class Slot extends React.Component {
     constructor() {
@@ -12,17 +13,24 @@ class Slot extends React.Component {
 
     componentWillMount() {
         const date = moment().format('YYYY-MM-DD')
-        this.setState({
-            schedule: utils.getSchedule(date)
-        });
+        utils.getSchedule(date)
+            .then((schedule) => {
+                this.setState({
+                    schedule
+                });
+            });
     }
 
     render() {
-        return <div>Slot
+        return <div>
             {
-                this.state.schedule.map((item, i) => {
-                    return <div key={i}>item</div>;
-                })
+                (this.state.schedule)
+                    ? this.state.schedule.filter((elem, pos, arr) => {
+                            return arr.indexOf(elem) == pos;
+                        }).map((item, i) => {
+                            return <Profile profileId={item.Id} />;
+                        })
+                    : null
             }
         </div>;
     }

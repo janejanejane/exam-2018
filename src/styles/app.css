@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(45deg,#3CB9C0, #2CAACA);
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
 label {
@@ -16,6 +17,11 @@ input:not([type='checkbox']) {
     line-height: 3;
 }
 
+img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 #app {
     color: white;
     max-width: 320px;
@@ -29,3 +35,28 @@ input:not([type='checkbox']) {
     display: block;
     padding: 20px;
 }
+
+.profile {
+    display: grid;
+    grid-template-columns: max-content;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    color: #888888;
+}
+
+.profile-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.profile-name-title {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.profile-name {
+    color: #2CAACA;
+    font-size: 22px;
+}
+

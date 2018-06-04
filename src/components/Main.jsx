@@ -1,10 +1,9 @@
 import React from 'react';
+import Slot from './Slot';
 import Registration from 'Components/Registration';
 
 import 'Styles/normalize.min';
 import 'Styles/app';
-import Slot from './Slot';
-import Profile from './Profile';
 
 class Main extends React.Component {
     constructor() {
@@ -22,12 +21,9 @@ class Main extends React.Component {
 
     showComponent() {
         let component = null;
-console.log('this is the location:', this.state.location)
+
         // change the component to show based on the url
         switch (this.state.location) {
-            case '/profile':
-                component = <Profile />
-                break;
             
             case '/schedule':
                 component = <Slot />

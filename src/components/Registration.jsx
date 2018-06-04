@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Registration = () => {
-    return <div>
+    return <div id="registration">
         <div class="row">
             Let's start with your name:
         </div>
