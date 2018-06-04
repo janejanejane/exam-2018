@@ -11,6 +11,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve( __dirname, './' ),
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -40,9 +41,10 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            Components: path.resolve( __dirname, 'src', 'components' ),
-            Styles: path.resolve( __dirname, 'src', 'styles' ),
+            '@': path.resolve( __dirname, 'src' ),
+            'Components': path.resolve( __dirname, 'src', 'components' ),
+            'Styles': path.resolve( __dirname, 'src', 'styles' ),
         },
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.css'],
     },
 };

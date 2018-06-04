@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(45deg,#3CB9C0, #2CAACA);
+    font-family: 'Open Sans', sans-serif;
+}
+
+label {
+    display: block;
+}
+
+input:not([type='checkbox']) {
+    outline: 0;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: white;
+    width: 100%;
+    line-height: 3;
+}
+
+#app {
+    color: white;
+    max-width: 320px;
+    padding: 30px;
+    text-align: left;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.row {
+    display: block;
+    padding: 20px;
+}
